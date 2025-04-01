@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Coffee, Utensils, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,7 +16,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Yogurt greco con cannella", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + insalata verde con tonno", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di verdure crude", icon: Coffee },
-      { time: "Cena", description: "Petto di pollo alla griglia con verdure al vapore", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Bevi molta acqua durante la giornata e prepara i pasti in anticipo.",
     activity: "Camminata leggera di 20 minuti"
@@ -29,7 +30,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Una manciata di mandorle non salate", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + zucchine grigliate", icon: Utensils },
       { time: "Merenda", description: "Cetrioli a fette con hummus", icon: Coffee },
-      { time: "Cena", description: "Salmone al forno con asparagi", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Monitora la tua fame reale. Bevi un bicchiere d'acqua prima dei pasti.",
     activity: "Stretching mattutino e camminata di 25 minuti"
@@ -44,7 +45,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Bastoncini di sedano con un po' di formaggio light", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + peperoni grigliati", icon: Utensils },
       { time: "Merenda", description: "Avocado (1/4) con limone", icon: Coffee },
-      { time: "Cena", description: "Tacchino arrosto con broccoli", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Ricorda di bere un bicchiere d'acqua appena sveglio per riattivare il metabolismo.",
     activity: "Camminata veloce di 30 minuti"
@@ -59,7 +60,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Un uovo sodo", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + insalata di pomodori", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di carote", icon: Coffee },
-      { time: "Cena", description: "Pesce bianco al vapore con cavolfiore", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Fai attenzione alle spezie: curcuma, pepe e zenzero possono aiutare il metabolismo.",
     activity: "Alternanza di camminata e jogging leggero per 20 minuti"
@@ -73,7 +74,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Yogurt greco con semi di chia", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + verdure miste grigliate", icon: Utensils },
       { time: "Merenda", description: "Tofu affumicato (30g)", icon: Coffee },
-      { time: "Cena", description: "Insalata di spinaci con uova e avocado", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Fai una lista dei cambiamenti positivi che hai notato finora per mantenerti motivato.",
     activity: "Yoga leggero o stretching completo (30 minuti)"
@@ -88,7 +89,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Bastoncini di peperone con hummus leggero", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + zucchine al vapore", icon: Utensils },
       { time: "Merenda", description: "Una manciata di pistacchi non salati", icon: Coffee },
-      { time: "Cena", description: "Petto di pollo grigliato con melanzane", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Sperimenta con nuovi condimenti a base di erbe per rendere i pasti più vari e gustosi.",
     activity: "Camminata di 40 minuti a passo sostenuto"
@@ -102,7 +103,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Gamberetti bolliti (60g)", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + insalata mista", icon: Utensils },
       { time: "Merenda", description: "Cubetti di formaggio light (30g)", icon: Coffee },
-      { time: "Cena", description: "Hamburger di tacchino con verdure grigliate", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Rifletti sui cambiamenti nelle tue abitudini alimentari e prendi nota di come ti senti.",
     activity: "Allenamento a intervalli: alternare 2 minuti di camminata con 1 minuto di corsa (20 minuti totali)"
@@ -116,7 +117,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Bastoncini di cetriolo", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + broccoli al vapore", icon: Utensils },
       { time: "Merenda", description: "Petto di tacchino a fette (30g)", icon: Coffee },
-      { time: "Cena", description: "Insalata di tonno con pomodori e olive", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Cerca di dormire almeno 7-8 ore per ottimizzare i risultati del programma.",
     activity: "Camminata in salita o scale (30 minuti)"
@@ -130,7 +131,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Albume d'uovo (1-2) cotto", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + asparagi", icon: Utensils },
       { time: "Merenda", description: "Yogurt greco magro", icon: Coffee },
-      { time: "Cena", description: "Pesce al forno con zucchine e pomodorini", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Inizia a pensare a come manterrai le buone abitudini dopo la fine del programma.",
     activity: "Combinazione di esercizi: camminata, stretching e esercizi di respirazione (40 minuti)"
@@ -144,7 +145,7 @@ const dailyPlans = [
       { time: "Spuntino", description: "Noci (una piccola manciata)", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + verdure colorate al vapore", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di sedano con ricotta light", icon: Coffee },
-      { time: "Cena", description: "Cena speciale: salmone grigliato con verdure e una piccola porzione di quinoa", icon: Utensils },
+      { time: "Cena", description: "Cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
     tips: "Prenditi del tempo per riflettere sui risultati ottenuti e pianifica come mantenere il tuo nuovo stile di vita.",
     activity: "Attività preferita a scelta (45 minuti) per celebrare il traguardo"
