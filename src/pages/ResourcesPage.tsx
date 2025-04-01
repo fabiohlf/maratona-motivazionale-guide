@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ExternalLink, FileText, Video, Heart, PhoneCall } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -20,7 +21,7 @@ const articles = [
   {
     title: "L'importanza delle proteine nella dieta",
     description: "Come le proteine contribuiscono al mantenimento della massa muscolare e supportano il metabolismo.",
-    link: "https://www.tusito.it/proteine-dieta", // Modifica questo link con il tuo link personale
+    link: "https://autumn-paradox-10a.notion.site/L-importanza-delle-proteine-nella-dieta-1c85e92a5bc3803eb860d0388b7673bd",
     type: "article"
   },
   {
