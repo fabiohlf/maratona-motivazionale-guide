@@ -9,25 +9,25 @@ const articles = [
   {
     title: "I benefici dei frullati Herbalife",
     description: "Scopri perché i frullati Herbalife sono un'ottima scelta per un'alimentazione sana ed equilibrata.",
-    link: "https://www.herbalife.it/prodotti/nutrizione/sostituti-del-pasto",
+    link: "https://www.tusito.it/benefici-frullati", // Modifica questo link con il tuo link personale
     type: "article"
   },
   {
     title: "Perché eliminare i cereali per 10 giorni",
     description: "I benefici di una pausa dai cereali e come questo può migliorare il tuo metabolismo.",
-    link: "https://www.herbalife.it/articoli-e-scienza/benessere/nutrizione-bilanciata",
+    link: "https://www.tusito.it/cereali-dieta", // Modifica questo link con il tuo link personale
     type: "article"
   },
   {
     title: "L'importanza delle proteine nella dieta",
     description: "Come le proteine contribuiscono al mantenimento della massa muscolare e supportano il metabolismo.",
-    link: "https://www.herbalife.it/articoli-e-scienza/benessere/importanza-delle-proteine",
+    link: "https://www.tusito.it/proteine-dieta", // Modifica questo link con il tuo link personale
     type: "article"
   },
   {
     title: "Idratazione: la chiave del benessere",
     description: "Perché bere acqua a sufficienza è fondamentale per il tuo benessere e per ottimizzare i risultati.",
-    link: "https://www.herbalife.it/articoli-e-scienza/benessere/idratazione",
+    link: "https://www.tusito.it/importanza-idratazione", // Modifica questo link con il tuo link personale
     type: "article"
   }
 ];
@@ -36,21 +36,21 @@ const videos = [
   {
     title: "Come preparare un frullato Herbalife",
     description: "Tutorial passo-passo per preparare un frullato nutriente e delizioso.",
-    link: "https://www.youtube.com/watch?v=example1",
+    link: "https://www.youtube.com/watch?v=tuo-video-frullato", // Modifica questo link con il tuo link YouTube
     thumbnail: "https://images.unsplash.com/photo-1622484212850-a04e89611fae",
     type: "video"
   },
   {
     title: "Esercizi semplici da fare a casa",
     description: "Una routine di esercizi leggeri perfetti da abbinare alla Maratona 10 Giorni.",
-    link: "https://www.youtube.com/watch?v=example2",
+    link: "https://www.youtube.com/watch?v=tuo-video-esercizi", // Modifica questo link con il tuo link YouTube
     thumbnail: "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a",
     type: "video"
   },
   {
     title: "Testimonianze di successo",
     description: "Storie di persone che hanno completato con successo la Maratona 10 Giorni.",
-    link: "https://www.youtube.com/watch?v=example3",
+    link: "https://www.youtube.com/watch?v=tuo-video-testimonianze", // Modifica questo link con il tuo link YouTube
     thumbnail: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
     type: "video"
   }
