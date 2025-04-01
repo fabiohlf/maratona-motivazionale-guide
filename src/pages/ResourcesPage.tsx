@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink, FileText, Video, Heart, PhoneCall } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,7 +14,7 @@ const articles = [
   {
     title: "Perché eliminare i cereali per 10 giorni",
     description: "I benefici di una pausa dai cereali e come questo può migliorare il tuo metabolismo.",
-    link: "https://www.tusito.it/cereali-dieta", // Modifica questo link con il tuo link personale
+    link: "https://autumn-paradox-10a.notion.site/Perch-Eliminare-i-Cereali-per-10-Giorni-1c85e92a5bc380dca83ef7a422c6dc41",
     type: "article"
   },
   {
