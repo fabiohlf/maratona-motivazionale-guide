@@ -10,7 +10,7 @@ const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { name: 'Home', href: '/', icon: Home },
     { name: 'Linee Guida', href: '/guidelines', icon: BookOpen },
     { name: 'Piano Giornaliero', href: '/daily-plan', icon: Calendar },
-    { name: 'Tracker', href: '/tracker', icon: BarChart2 },
+    { name: 'Diario Giornaliero', href: '/tracker', icon: BarChart2 },
     { name: 'Risorse', href: '/resources', icon: Library },
     { name: 'Profilo', href: '/profile', icon: User }
   ];

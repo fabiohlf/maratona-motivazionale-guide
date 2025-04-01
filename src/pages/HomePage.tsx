@@ -106,7 +106,7 @@ const HomePage = () => {
           
           <Link to="/tracker" className="herbalife-gradient-orange text-white p-4 rounded-xl flex flex-col items-center justify-center text-center h-32 shadow-md hover:shadow-lg transition-shadow">
             <BarChart2 className="h-8 w-8 mb-2" />
-            <span className="font-semibold">Tracker Giornaliero</span>
+            <span className="font-semibold">Diario Giornaliero</span>
           </Link>
           
           <Link to="/resources" className="herbalife-gradient text-white p-4 rounded-xl flex flex-col items-center justify-center text-center h-32 shadow-md hover:shadow-lg transition-shadow">

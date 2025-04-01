@@ -138,7 +138,7 @@ const TrackerPage = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">Tracker Giornaliero</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2">Diario Giornaliero</h1>
         <p className="text-gray-600">Monitora i tuoi progressi durante la maratona</p>
       </div>
 
