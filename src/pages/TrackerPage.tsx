@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Droplet, Coffee, Dumbbell, PenSquare, Apple, Pizza } from 'lucide-react';
@@ -34,7 +33,8 @@ const getTodayData = (date: string) => {
     activityDetails: "",
     notes: "",
     meals: {
-      snacks: "",
+      morningSnack: "",
+      afternoonSnack: "",
       freeMeal: ""
     }
   };
@@ -113,7 +113,7 @@ const TrackerPage = () => {
     setTrackerData({ ...trackerData, notes: e.target.value });
   };
 
-  const handleMealChange = (type: 'snacks' | 'freeMeal', value: string) => {
+  const handleMealChange = (type: 'morningSnack' | 'afternoonSnack' | 'freeMeal', value: string) => {
     setTrackerData({
       ...trackerData,
       meals: {
@@ -122,8 +122,14 @@ const TrackerPage = () => {
       }
     });
 
+    const mealTypeMap = {
+      morningSnack: "Spuntino mattutino",
+      afternoonSnack: "Merenda pomeridiana",
+      freeMeal: "Pasto libero"
+    };
+
     toast({
-      title: type === 'snacks' ? "Spuntini aggiornati" : "Pasto libero aggiornato",
+      title: `${mealTypeMap[type]} aggiornato`,
       description: `Hai registrato cosa hai mangiato oggi.`,
     });
   };
@@ -254,21 +260,21 @@ const TrackerPage = () => {
         </CardContent>
       </Card>
 
-      {/* Meals Tracker */}
+      {/* Morning Snack Tracker */}
       <Card className="herbalife-card">
         <CardHeader className="bg-amber-600 text-white">
           <CardTitle className="flex items-center gap-2">
-            <Apple className="h-5 w-5" /> Spuntini
+            <Apple className="h-5 w-5" /> Spuntino Mattutino
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
           <div className="space-y-4">
             <div className="grid w-full gap-2">
               <Textarea 
-                id="snacks" 
-                placeholder="Cosa hai mangiato come spuntini? (es. frutta secca, barrette Herbalife, ecc.)"
-                value={trackerData.meals?.snacks || ''}
-                onChange={(e) => handleMealChange('snacks', e.target.value)}
+                id="morning-snack" 
+                placeholder="Cosa hai mangiato come spuntino mattutino? (es. frutta secca, barrette Herbalife, frutta fresca)"
+                value={trackerData.meals?.morningSnack || ''}
+                onChange={(e) => handleMealChange('morningSnack', e.target.value)}
                 rows={2}
               />
             </div>
@@ -277,6 +283,34 @@ const TrackerPage = () => {
           <div className="mt-4 text-center">
             <p className="text-gray-600">
               Ricorda di scegliere spuntini salutari come barrette Herbalife, frutta secca o altri snack dalla lista consigliata.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Afternoon Snack Tracker */}
+      <Card className="herbalife-card">
+        <CardHeader className="bg-amber-600 text-white">
+          <CardTitle className="flex items-center gap-2">
+            <Apple className="h-5 w-5" /> Merenda Pomeridiana
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <div className="grid w-full gap-2">
+              <Textarea 
+                id="afternoon-snack" 
+                placeholder="Cosa hai mangiato come merenda pomeridiana? (es. frutta secca, barrette Herbalife, yogurt)"
+                value={trackerData.meals?.afternoonSnack || ''}
+                onChange={(e) => handleMealChange('afternoonSnack', e.target.value)}
+                rows={2}
+              />
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-gray-600">
+              Una merenda sana nel pomeriggio ti aiuta a mantenere stabili i livelli di energia e a evitare eccessi durante la cena.
             </p>
           </div>
         </CardContent>
