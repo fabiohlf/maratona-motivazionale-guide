@@ -14,7 +14,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Yogurt greco con cannella", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (insalata verde, pomodori, cetrioli) con tonno", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di verdure crude", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -28,7 +28,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Una manciata di mandorle non salate", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (zucchine grigliate, carote)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Cetrioli a fette con hummus", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -43,7 +43,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Bastoncini di sedano con un po' di formaggio light", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (peperoni grigliati, radicchio)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Avocado (1/4) con limone", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -58,7 +58,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Un uovo sodo", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (insalata di pomodori, finocchi)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di carote", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -72,7 +72,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Yogurt greco con semi di chia", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure miste grigliate (zucchine, melanzane, peperoni)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Tofu affumicato (30g)", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -87,7 +87,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Bastoncini di peperone con hummus leggero", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (zucchine al vapore, pomodorini)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Una manciata di pistacchi non salati", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -101,7 +101,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Gamberetti bolliti (60g)", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (insalata mista, cetrioli, ravanelli)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Cubetti di formaggio light (30g)", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -115,7 +115,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Bastoncini di cetriolo", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (broccoli al vapore, cavolfiore)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Petto di tacchino a fette (30g)", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -129,7 +129,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Albume d'uovo (1-2) cotto", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure (asparagi, spinaci)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Yogurt greco magro", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
@@ -143,7 +143,7 @@ const dailyPlans = [
     meals: [
       { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Noci (una piccola manciata)", icon: Coffee },
-      { time: "Pranzo", description: "Frullato Herbalife + verdure colorate (carote, pomodori, lattuga)", icon: Utensils },
+      { time: "Pranzo", description: "Frullato Nutrizionale (F1) o pranzo equilibrato e proteico (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di sedano con ricotta light", icon: Coffee },
       { time: "Cena", description: "Frullato Nutrizionale (F1) o cena equilibrata e proteica (40% carboidrati dalle verdure, 30% proteine, 30% grassi buoni)", icon: Utensils },
     ],
