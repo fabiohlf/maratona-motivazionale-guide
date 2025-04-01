@@ -9,7 +9,7 @@ const articles = [
   {
     title: "I benefici dei frullati Herbalife",
     description: "Scopri perché i frullati Herbalife sono un'ottima scelta per un'alimentazione sana ed equilibrata.",
-    link: "https://www.tusito.it/benefici-frullati", // Modifica questo link con il tuo link personale
+    link: "https://autumn-paradox-10a.notion.site/I-Benefici-dei-Frullati-Herbalife-1c85e92a5bc380b19304d47b5fca8047?pvs=4",
     type: "article"
   },
   {
