@@ -27,7 +27,7 @@ const articles = [
   {
     title: "Idratazione: la chiave del benessere",
     description: "Perché bere acqua a sufficienza è fondamentale per il tuo benessere e per ottimizzare i risultati.",
-    link: "https://www.tusito.it/importanza-idratazione", // Modifica questo link con il tuo link personale
+    link: "https://autumn-paradox-10a.notion.site/Idratazione-la-chiave-del-benessere-1c85e92a5bc38066a222dd83cf5f2ed3",
     type: "article"
   }
 ];
