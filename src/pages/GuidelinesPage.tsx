@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { X, Check, Coffee, Clock, Droplet, Beef } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const GuidelinesPage = () => {
   return (
@@ -86,84 +88,92 @@ const GuidelinesPage = () => {
 
       {/* Foods Section */}
       <section className="mt-8">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Cibi Consigliati</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">🌟 Cibi Consigliati</h2>
         
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="proteins">
-            <AccordionTrigger className="text-lg font-semibold">Proteine</AccordionTrigger>
-            <AccordionContent>
-              <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Pollo (senza pelle)</li>
-                <li>Tacchino</li>
-                <li>Pesce (salmone, tonno, merluzzo)</li>
-                <li>Uova</li>
-                <li>Tofu e tempeh</li>
-                <li>Legumi (lenticchie, ceci, fagioli)</li>
-                <li>Yogurt greco</li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
+        <Tabs defaultValue="proteins" className="w-full">
+          <TabsList className="w-full grid grid-cols-2 md:grid-cols-5 mb-6">
+            <TabsTrigger value="proteins">Proteine</TabsTrigger>
+            <TabsTrigger value="vegetables">Verdure</TabsTrigger>
+            <TabsTrigger value="fruits">Frutta</TabsTrigger>
+            <TabsTrigger value="fats">Grassi Sani</TabsTrigger>
+            <TabsTrigger value="avoid">Da Evitare</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="proteins" className="space-y-4">
+            <Card className="herbalife-card">
+              <CardContent className="pt-6">
+                <p className="mb-4 text-herbalife-green font-semibold">Consuma proteine magre per supportare il tuo metabolismo e nutrire i tuoi muscoli! 💪</p>
+                <ul className="list-disc list-inside space-y-1 ml-4">
+                  <li>Pollo (senza pelle)</li>
+                  <li>Tacchino</li>
+                  <li>Pesce (salmone, tonno, merluzzo, sgombro, branzino)</li>
+                  <li>Uova (intere e albumi)</li>
+                  <li>Tofu e tempeh</li>
+                  <li>Legumi (lenticchie, ceci, fagioli, piselli)</li>
+                  <li>Yogurt greco</li>
+                  <li>Formaggio di capra (l'unico ammesso)</li>
+                  <li>Prodotti Herbalife: Formula 1 (Frullato proteico), Formula 3 (Integratore proteico personalizzabile), Barrette proteiche</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
-          <AccordionItem value="vegetables">
-            <AccordionTrigger className="text-lg font-semibold">Verdure</AccordionTrigger>
-            <AccordionContent>
-              <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Spinaci</li>
-                <li>Broccoli</li>
-                <li>Cavolfiore</li>
-                <li>Zucchine</li>
-                <li>Peperoni</li>
-                <li>Pomodori</li>
-                <li>Carote</li>
-                <li>Cetrioli</li>
-                <li>Insalata verde</li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
+          <TabsContent value="vegetables" className="space-y-4">
+            <Card className="herbalife-card">
+              <CardContent className="pt-6">
+                <p className="mb-4 text-herbalife-green font-semibold">Verdure a volontà! Sono ricche di fibre, vitamine e minerali essenziali. 🥦🥕</p>
+                <ul className="list-disc list-inside space-y-1 ml-4">
+                  <li>Tutte le verdure, preferibilmente crude o cotte al vapore.</li>
+                  <li>Insalate miste, zucchine, carote, broccoli, spinaci, cavolfiore, cetrioli, peperoni, pomodori, ecc.</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
-          <AccordionItem value="fruits">
-            <AccordionTrigger className="text-lg font-semibold">Frutta (solo prima delle 10:00)</AccordionTrigger>
-            <AccordionContent>
-              <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Mele</li>
-                <li>Pere</li>
-                <li>Kiwi</li>
-                <li>Arance</li>
-                <li>Bacche (fragole, mirtilli, lamponi)</li>
-                <li>Pesche</li>
-                <li>Albicocche</li>
-              </ul>
-              <p className="mt-2 text-red-500 font-semibold">Ricorda: consuma la frutta solo entro le 10:00 del mattino!</p>
-            </AccordionContent>
-          </AccordionItem>
+          <TabsContent value="fruits" className="space-y-4">
+            <Card className="herbalife-card">
+              <CardContent className="pt-6">
+                <p className="mb-4 text-herbalife-green font-semibold">La frutta è fantastica ma va consumata al momento giusto per evitare picchi glicemici. 🍎🍇</p>
+                <ul className="list-disc list-inside space-y-1 ml-4">
+                  <li>Consenti ogni tipo di frutta fresca ma solo entro le 10:00 del mattino.</li>
+                  <li>Suggerimenti: mele, pere, arance, kiwi, prugne, frutti di bosco.</li>
+                </ul>
+                <p className="mt-4 text-red-500 font-semibold">Ricorda: consuma la frutta solo entro le 10:00 del mattino!</p>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
-          <AccordionItem value="fats">
-            <AccordionTrigger className="text-lg font-semibold">Grassi Sani</AccordionTrigger>
-            <AccordionContent>
-              <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Avocado</li>
-                <li>Olio d'oliva (con moderazione)</li>
-                <li>Noci e semi (con moderazione)</li>
-                <li>Pesce grasso (salmone, sgombro)</li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
+          <TabsContent value="fats" className="space-y-4">
+            <Card className="herbalife-card">
+              <CardContent className="pt-6">
+                <p className="mb-4 text-herbalife-green font-semibold">I grassi buoni ti danno energia e supportano il tuo benessere! 🥑</p>
+                <ul className="list-disc list-inside space-y-1 ml-4">
+                  <li>Avocado</li>
+                  <li>Olio extravergine d'oliva</li>
+                  <li>Frutta secca (mandorle, noci, nocciole – senza sale e non tostate)</li>
+                  <li>Semi (chia, lino, zucca, girasole)</li>
+                  <li>Burro di mandorle o arachidi (naturale e senza zuccheri aggiunti)</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
-          <AccordionItem value="avoid">
-            <AccordionTrigger className="text-lg font-semibold">Cibi da Evitare</AccordionTrigger>
-            <AccordionContent>
-              <ul className="list-disc list-inside space-y-1 ml-4 text-red-500">
-                <li>Cereali e prodotti a base di cereali</li>
-                <li>Pasta, pane e prodotti da forno</li>
-                <li>Zuccheri aggiunti e dolci</li>
-                <li>Bevande zuccherate</li>
-                <li>Alcol</li>
-                <li>Cibi processati e fast food</li>
-                <li>Snack confezionati</li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+          <TabsContent value="avoid" className="space-y-4">
+            <Card className="herbalife-card">
+              <CardContent className="pt-6">
+                <p className="mb-4 text-red-500 font-semibold">Per ottenere i migliori risultati, è fondamentale evitare questi alimenti. 🚫</p>
+                <ul className="list-disc list-inside space-y-1 ml-4 text-red-500">
+                  <li>Dolci, zuccheri raffinati, prodotti da forno industriali</li>
+                  <li>Bevande zuccherate, alcolici, succhi di frutta confezionati</li>
+                  <li>Pasta bianca, pane bianco, riso raffinato</li>
+                  <li>Patatine, snack confezionati</li>
+                  <li>Formaggi (eccetto il formaggio di capra)</li>
+                  <li>Latte vaccino (da sostituire con latte vegetale come mandorla o soia)</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
       </section>
 
       {/* Tips Section */}
