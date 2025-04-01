@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { X, Check, Coffee, Clock, Droplet, Beef } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -94,12 +93,12 @@ const GuidelinesPage = () => {
         
         <Tabs defaultValue="proteins" className="w-full">
           {isMobile ? (
-            <TabsList className="w-full grid grid-cols-2 mb-8 gap-y-2">
-              <TabsTrigger value="proteins" className="w-full">Proteine</TabsTrigger>
-              <TabsTrigger value="vegetables" className="w-full">Verdure</TabsTrigger>
-              <TabsTrigger value="fruits" className="w-full">Frutta</TabsTrigger>
-              <TabsTrigger value="fats" className="w-full">Grassi Sani</TabsTrigger>
-              <TabsTrigger value="avoid" className="w-full col-span-2">Da Evitare</TabsTrigger>
+            <TabsList className="w-full grid grid-cols-5 mb-6">
+              <TabsTrigger value="proteins" className="w-full text-xs">Proteine</TabsTrigger>
+              <TabsTrigger value="vegetables" className="w-full text-xs">Verdure</TabsTrigger>
+              <TabsTrigger value="fruits" className="w-full text-xs">Frutta</TabsTrigger>
+              <TabsTrigger value="fats" className="w-full text-xs">Grassi Sani</TabsTrigger>
+              <TabsTrigger value="avoid" className="w-full text-xs">Da Evitare</TabsTrigger>
             </TabsList>
           ) : (
             <TabsList className="w-full grid grid-cols-5 mb-6">
@@ -170,7 +169,7 @@ const GuidelinesPage = () => {
             </Card>
           </TabsContent>
 
-          <TabsContent value="avoid" className={`space-y-4 ${isMobile ? 'pb-14' : ''}`}>
+          <TabsContent value="avoid" className={`space-y-4 ${isMobile ? 'pb-8' : ''}`}>
             <Card className="herbalife-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-red-500 font-semibold">Per ottenere i migliori risultati, è fondamentale evitare questi alimenti. 🚫</p>
