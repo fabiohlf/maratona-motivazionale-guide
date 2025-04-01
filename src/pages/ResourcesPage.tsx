@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ExternalLink, FileText, Video, Heart, PhoneCall } from 'lucide-react';
+import { ExternalLink, FileText, Video, Heart, PhoneCall, Utensils } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -36,21 +35,21 @@ const videos = [
   {
     title: "Come preparare un frullato Herbalife",
     description: "Tutorial passo-passo per preparare un frullato nutriente e delizioso.",
-    link: "https://www.youtube.com/watch?v=tuo-video-frullato", // Modifica questo link con il tuo link YouTube
+    link: "https://www.youtube.com/watch?v=tuo-video-frullato",
     thumbnail: "https://images.unsplash.com/photo-1622484212850-a04e89611fae",
     type: "video"
   },
   {
     title: "Esercizi semplici da fare a casa",
     description: "Una routine di esercizi leggeri perfetti da abbinare alla Maratona 10 Giorni.",
-    link: "https://www.youtube.com/watch?v=tuo-video-esercizi", // Modifica questo link con il tuo link YouTube
+    link: "https://www.youtube.com/watch?v=tuo-video-esercizi",
     thumbnail: "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a",
     type: "video"
   },
   {
     title: "Testimonianze di successo",
     description: "Storie di persone che hanno completato con successo la Maratona 10 Giorni.",
-    link: "https://www.youtube.com/watch?v=tuo-video-testimonianze", // Modifica questo link con il tuo link YouTube
+    link: "https://www.youtube.com/watch?v=tuo-video-testimonianze",
     thumbnail: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
     type: "video"
   }
@@ -76,6 +75,50 @@ const motivational = [
   {
     quote: "Il modo migliore per predire il futuro è crearlo.",
     author: "Peter Drucker"
+  }
+];
+
+const recipes = [
+  {
+    title: "Frullato proteico con frutti di bosco",
+    description: "Un delizioso frullato ricco di proteine con frutti di bosco e Formula 1 Herbalife.",
+    ingredients: [
+      "2 misurini di Formula 1 Herbalife gusto Frutti di Bosco",
+      "250ml di latte scremato o bevanda vegetale",
+      "100g di frutti di bosco freschi o surgelati",
+      "Ghiaccio (opzionale)"
+    ],
+    preparation: "Mescolare tutti gli ingredienti in un frullatore fino a ottenere una consistenza omogenea. Servire immediatamente.",
+    type: "recipe"
+  },
+  {
+    title: "Pancake proteici",
+    description: "Pancake soffici e proteici, perfetti per una colazione energetica.",
+    ingredients: [
+      "1 misurino di Formula 1 Herbalife gusto Vaniglia",
+      "1 uovo intero",
+      "2 albumi",
+      "50ml di latte scremato",
+      "1/2 banana matura schiacciata",
+      "Cannella q.b."
+    ],
+    preparation: "Mescolare tutti gli ingredienti fino a ottenere una pastella liscia. Cuocere piccole porzioni in una padella antiaderente a fuoco medio per 2-3 minuti per lato.",
+    type: "recipe"
+  },
+  {
+    title: "Insalata proteica estiva",
+    description: "Un'insalata leggera ma nutriente, ideale per un pranzo durante la Maratona 10 Giorni.",
+    ingredients: [
+      "Insalata verde mista",
+      "1 scatoletta di tonno al naturale",
+      "1/2 avocado",
+      "Pomodorini ciliegino",
+      "1 uovo sodo",
+      "1 cucchiaio di semi di chia",
+      "Succo di limone e olio EVO q.b."
+    ],
+    preparation: "Disporre l'insalata in un piatto, aggiungere gli ingredienti tagliati a pezzi e condire con succo di limone e un filo d'olio.",
+    type: "recipe"
   }
 ];
 
@@ -126,6 +169,36 @@ const QuoteCard = ({ quote, author }: { quote: string; author: string }) => {
   );
 };
 
+const RecipeCard = ({ recipe }: { recipe: any }) => {
+  return (
+    <Card className="herbalife-card h-full flex flex-col">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Utensils className="h-5 w-5 text-herbalife-green" />
+          {recipe.title}
+        </CardTitle>
+        <CardDescription>{recipe.description}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex-grow">
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-medium text-sm mb-2">Ingredienti:</h4>
+            <ul className="list-disc pl-5 text-sm space-y-1">
+              {recipe.ingredients.map((ingredient: string, idx: number) => (
+                <li key={idx}>{ingredient}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-medium text-sm mb-2">Preparazione:</h4>
+            <p className="text-sm">{recipe.preparation}</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 const ResourcesPage = () => {
   return (
     <div className="space-y-8 animate-fade-in">
@@ -135,9 +208,10 @@ const ResourcesPage = () => {
       </div>
 
       <Tabs defaultValue="articles">
-        <TabsList className="mb-6 w-full grid grid-cols-3">
+        <TabsList className="mb-6 w-full grid grid-cols-4">
           <TabsTrigger value="articles">Articoli</TabsTrigger>
           <TabsTrigger value="videos">Video</TabsTrigger>
+          <TabsTrigger value="recipes">Ricette</TabsTrigger>
           <TabsTrigger value="motivation">Motivazione</TabsTrigger>
         </TabsList>
         
@@ -153,6 +227,14 @@ const ResourcesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {videos.map((video, index) => (
               <ResourceCard key={index} resource={video} />
+            ))}
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="recipes" className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {recipes.map((recipe, index) => (
+              <RecipeCard key={index} recipe={recipe} />
             ))}
           </div>
         </TabsContent>
