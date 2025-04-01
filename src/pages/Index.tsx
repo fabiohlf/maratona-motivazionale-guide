@@ -1,9 +1,16 @@
 
 import React from 'react';
-import HomePage from './HomePage';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Index = () => {
-  return <HomePage />;
+  const { isAuthenticated } = useAuth();
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
+  
+  return <Navigate to="/" />;
 };
 
 export default Index;
