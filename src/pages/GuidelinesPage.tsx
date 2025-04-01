@@ -94,7 +94,7 @@ const GuidelinesPage = () => {
         
         <Tabs defaultValue="proteins" className="w-full">
           {isMobile ? (
-            <TabsList className="w-full grid grid-cols-2 mb-6 gap-y-2">
+            <TabsList className="w-full grid grid-cols-2 mb-8 gap-y-2">
               <TabsTrigger value="proteins" className="w-full">Proteine</TabsTrigger>
               <TabsTrigger value="vegetables" className="w-full">Verdure</TabsTrigger>
               <TabsTrigger value="fruits" className="w-full">Frutta</TabsTrigger>
@@ -111,7 +111,7 @@ const GuidelinesPage = () => {
             </TabsList>
           )}
           
-          <TabsContent value="proteins" className="space-y-4">
+          <TabsContent value="proteins" className={`space-y-4 ${isMobile ? 'pb-8' : ''}`}>
             <Card className="herbalife-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-herbalife-green font-semibold">Consuma proteine magre per supportare il tuo metabolismo e nutrire i tuoi muscoli! 💪</p>
@@ -130,7 +130,7 @@ const GuidelinesPage = () => {
             </Card>
           </TabsContent>
 
-          <TabsContent value="vegetables" className="space-y-4">
+          <TabsContent value="vegetables" className={`space-y-4 ${isMobile ? 'pb-8' : ''}`}>
             <Card className="herbalife-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-herbalife-green font-semibold">Verdure a volontà! Sono ricche di fibre, vitamine e minerali essenziali. 🥦🥕</p>
@@ -142,7 +142,7 @@ const GuidelinesPage = () => {
             </Card>
           </TabsContent>
 
-          <TabsContent value="fruits" className="space-y-4">
+          <TabsContent value="fruits" className={`space-y-4 ${isMobile ? 'pb-8' : ''}`}>
             <Card className="herbalife-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-herbalife-green font-semibold">La frutta è fantastica ma va consumata al momento giusto per evitare picchi glicemici. 🍎🍇</p>
@@ -155,7 +155,7 @@ const GuidelinesPage = () => {
             </Card>
           </TabsContent>
 
-          <TabsContent value="fats" className="space-y-4">
+          <TabsContent value="fats" className={`space-y-4 ${isMobile ? 'pb-8' : ''}`}>
             <Card className="herbalife-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-herbalife-green font-semibold">I grassi buoni ti danno energia e supportano il tuo benessere! 🥑</p>
@@ -170,7 +170,7 @@ const GuidelinesPage = () => {
             </Card>
           </TabsContent>
 
-          <TabsContent value="avoid" className="space-y-4">
+          <TabsContent value="avoid" className={`space-y-4 ${isMobile ? 'pb-14' : ''}`}>
             <Card className="herbalife-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-red-500 font-semibold">Per ottenere i migliori risultati, è fondamentale evitare questi alimenti. 🚫</p>
