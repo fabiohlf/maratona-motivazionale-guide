@@ -31,6 +31,7 @@ const getTodayData = (date: string) => {
       dinner: false
     },
     activity: false,
+    activityDetails: "",
     notes: "",
     meals: {
       snacks: "",
@@ -104,6 +105,10 @@ const TrackerPage = () => {
     }
   };
 
+  const handleActivityDetailsChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setTrackerData({ ...trackerData, activityDetails: e.target.value });
+  };
+
   const handleNotesChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTrackerData({ ...trackerData, notes: e.target.value });
   };
@@ -161,62 +166,6 @@ const TrackerPage = () => {
           Giorno Successivo <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
-
-      {/* Meals Tracker */}
-      <Card className="herbalife-card">
-        <CardHeader className="bg-amber-600 text-white">
-          <CardTitle className="flex items-center gap-2">
-            <Apple className="h-5 w-5" /> Spuntini
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="pt-6">
-          <div className="space-y-4">
-            <div className="grid w-full gap-2">
-              <Textarea 
-                id="snacks" 
-                placeholder="Cosa hai mangiato come spuntini? (es. frutta secca, barrette Herbalife, ecc.)"
-                value={trackerData.meals?.snacks || ''}
-                onChange={(e) => handleMealChange('snacks', e.target.value)}
-                rows={2}
-              />
-            </div>
-          </div>
-          
-          <div className="mt-4 text-center">
-            <p className="text-gray-600">
-              Ricorda di scegliere spuntini salutari come barrette Herbalife, frutta secca o altri snack dalla lista consigliata.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Free Meal Tracker */}
-      <Card className="herbalife-card">
-        <CardHeader className="bg-amber-700 text-white">
-          <CardTitle className="flex items-center gap-2">
-            <Pizza className="h-5 w-5" /> Pasto Libero
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="pt-6">
-          <div className="space-y-4">
-            <div className="grid w-full gap-2">
-              <Textarea 
-                id="free-meal" 
-                placeholder="Descrivi il tuo pasto libero di oggi"
-                value={trackerData.meals?.freeMeal || ''}
-                onChange={(e) => handleMealChange('freeMeal', e.target.value)}
-                rows={2}
-              />
-            </div>
-          </div>
-          
-          <div className="mt-4 text-center">
-            <p className="text-gray-600">
-              Anche nel pasto libero, cerca di mantenere un buon equilibrio nutrizionale.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
 
       {/* Water Tracker */}
       <Card className="herbalife-card">
@@ -305,6 +254,62 @@ const TrackerPage = () => {
         </CardContent>
       </Card>
 
+      {/* Meals Tracker */}
+      <Card className="herbalife-card">
+        <CardHeader className="bg-amber-600 text-white">
+          <CardTitle className="flex items-center gap-2">
+            <Apple className="h-5 w-5" /> Spuntini
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <div className="grid w-full gap-2">
+              <Textarea 
+                id="snacks" 
+                placeholder="Cosa hai mangiato come spuntini? (es. frutta secca, barrette Herbalife, ecc.)"
+                value={trackerData.meals?.snacks || ''}
+                onChange={(e) => handleMealChange('snacks', e.target.value)}
+                rows={2}
+              />
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-gray-600">
+              Ricorda di scegliere spuntini salutari come barrette Herbalife, frutta secca o altri snack dalla lista consigliata.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Free Meal Tracker */}
+      <Card className="herbalife-card">
+        <CardHeader className="bg-amber-700 text-white">
+          <CardTitle className="flex items-center gap-2">
+            <Pizza className="h-5 w-5" /> Pasto Libero
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <div className="grid w-full gap-2">
+              <Textarea 
+                id="free-meal" 
+                placeholder="Descrivi il tuo pasto libero di oggi"
+                value={trackerData.meals?.freeMeal || ''}
+                onChange={(e) => handleMealChange('freeMeal', e.target.value)}
+                rows={2}
+              />
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-gray-600">
+              Anche nel pasto libero, cerca di mantenere un buon equilibrio nutrizionale.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Activity Tracker */}
       <Card className="herbalife-card">
         <CardHeader className="bg-gray-800 text-white">
@@ -313,7 +318,7 @@ const TrackerPage = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 mb-4">
             <Checkbox 
               id="activity" 
               checked={trackerData.activity} 
@@ -325,6 +330,16 @@ const TrackerPage = () => {
             >
               Ho completato l'attività fisica giornaliera (almeno 30 minuti di camminata)
             </label>
+          </div>
+          
+          <div className="mt-2 mb-4">
+            <Textarea
+              placeholder="Descrivi la tua attività fisica di oggi (es. 40 minuti di camminata veloce, 20 minuti di ginnastica...)"
+              value={trackerData.activityDetails || ''}
+              onChange={handleActivityDetailsChange}
+              rows={2}
+              className="resize-none"
+            />
           </div>
           
           <div className="mt-4 text-center">
