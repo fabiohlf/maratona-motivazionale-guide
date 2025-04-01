@@ -12,7 +12,7 @@ const dailyPlans = [
     title: "Iniziamo!",
     description: "Il primo giorno è fondamentale per impostare il ritmo. Focus sull'idratazione e abituarsi ai frullati.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Yogurt greco con cannella", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + insalata verde con tonno", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di verdure crude", icon: Coffee },
@@ -26,7 +26,7 @@ const dailyPlans = [
     title: "Continuiamo il Percorso",
     description: "Oggi è importante consolidare le abitudini del primo giorno e mantenere alta l'idratazione.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Una manciata di mandorle non salate", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + zucchine grigliate", icon: Utensils },
       { time: "Merenda", description: "Cetrioli a fette con hummus", icon: Coffee },
@@ -41,7 +41,7 @@ const dailyPlans = [
     title: "Aumentiamo l'Energia",
     description: "Oggi concentriamoci sull'energia e sul mantenere alta la motivazione.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Bastoncini di sedano con un po' di formaggio light", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + peperoni grigliati", icon: Utensils },
       { time: "Merenda", description: "Avocado (1/4) con limone", icon: Coffee },
@@ -56,7 +56,7 @@ const dailyPlans = [
     title: "Rafforzare le Abitudini",
     description: "A questo punto dovresti iniziare a sentire i benefici del programma.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Un uovo sodo", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + insalata di pomodori", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di carote", icon: Coffee },
@@ -70,7 +70,7 @@ const dailyPlans = [
     title: "Metà Percorso",
     description: "Sei arrivato a metà del percorso! Oggi celebriamo i progressi fatti finora.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Yogurt greco con semi di chia", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + verdure miste grigliate", icon: Utensils },
       { time: "Merenda", description: "Tofu affumicato (30g)", icon: Coffee },
@@ -85,7 +85,7 @@ const dailyPlans = [
     title: "Nuova Energia",
     description: "Oggi concentriamoci sul rinnovare l'energia e la motivazione per la seconda metà.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Bastoncini di peperone con hummus leggero", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + zucchine al vapore", icon: Utensils },
       { time: "Merenda", description: "Una manciata di pistacchi non salati", icon: Coffee },
@@ -99,7 +99,7 @@ const dailyPlans = [
     title: "Settimo Giorno",
     description: "Una settimana completata! Il tuo corpo sta già beneficiando dei cambiamenti.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Gamberetti bolliti (60g)", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + insalata mista", icon: Utensils },
       { time: "Merenda", description: "Cubetti di formaggio light (30g)", icon: Coffee },
@@ -113,7 +113,7 @@ const dailyPlans = [
     title: "Ottimizzazione",
     description: "È il momento di ottimizzare il tuo percorso in base alle esperienze dei giorni precedenti.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Bastoncini di cetriolo", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + broccoli al vapore", icon: Utensils },
       { time: "Merenda", description: "Petto di tacchino a fette (30g)", icon: Coffee },
@@ -127,7 +127,7 @@ const dailyPlans = [
     title: "Penultimo Giorno",
     description: "Sei quasi alla fine del percorso! Mantieni alta la concentrazione.",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Albume d'uovo (1-2) cotto", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + asparagi", icon: Utensils },
       { time: "Merenda", description: "Yogurt greco magro", icon: Coffee },
@@ -141,7 +141,7 @@ const dailyPlans = [
     title: "Traguardo Finale",
     description: "Congratulazioni! Hai completato la Maratona 10 Giorni. Oggi celebriamo i tuoi risultati!",
     meals: [
-      { time: "Colazione", description: "Frullato Herbalife (prima delle 10:00)", icon: Coffee },
+      { time: "Colazione", description: "Frullato Herbalife", icon: Coffee },
       { time: "Spuntino", description: "Noci (una piccola manciata)", icon: Coffee },
       { time: "Pranzo", description: "Frullato Herbalife + verdure colorate al vapore", icon: Utensils },
       { time: "Merenda", description: "Bastoncini di sedano con ricotta light", icon: Coffee },
