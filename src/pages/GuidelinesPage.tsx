@@ -9,7 +9,7 @@ const GuidelinesPage = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className="space-y-8 animate-fade-in pb-12">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Linee Guida del Programma</h1>
         <p className="text-gray-600">Segui queste regole per ottenere i migliori risultati durante i 10 giorni</p>
