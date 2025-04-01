@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { X, Check, Coffee, Clock, Droplet, Beef } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,7 +49,7 @@ const GuidelinesPage = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-1">2 frullati Herbalife al giorno</h3>
-                <p className="text-gray-600">Consuma due frullati Herbalife al giorno, preferibilmente a colazione e pranzo o cena.</p>
+                <p className="text-gray-600">Consuma due frullati Herbalife al giorno a colazione e pranzo o cena.</p>
               </div>
             </div>
           </CardContent>
