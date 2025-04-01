@@ -1,12 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
-import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Droplet, Coffee, Dumbbell, PenSquare } from 'lucide-react';
+import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Droplet, Coffee, Dumbbell, PenSquare, Apple, Pizza } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
 import { toast } from '@/components/ui/use-toast';
 
 // Get stored tracker data from localStorage
@@ -28,7 +31,11 @@ const getTodayData = (date: string) => {
       dinner: false
     },
     activity: false,
-    notes: ""
+    notes: "",
+    meals: {
+      snacks: "",
+      freeMeal: ""
+    }
   };
 };
 
@@ -101,6 +108,21 @@ const TrackerPage = () => {
     setTrackerData({ ...trackerData, notes: e.target.value });
   };
 
+  const handleMealChange = (type: 'snacks' | 'freeMeal', value: string) => {
+    setTrackerData({
+      ...trackerData,
+      meals: {
+        ...trackerData.meals,
+        [type]: value
+      }
+    });
+
+    toast({
+      title: type === 'snacks' ? "Spuntini aggiornati" : "Pasto libero aggiornato",
+      description: `Hai registrato cosa hai mangiato oggi.`,
+    });
+  };
+
   const formatDisplayDate = (dateString: string) => {
     const date = new Date(dateString);
     return format(date, 'dd MMMM yyyy');
@@ -139,6 +161,62 @@ const TrackerPage = () => {
           Giorno Successivo <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
+
+      {/* Meals Tracker */}
+      <Card className="herbalife-card">
+        <CardHeader className="bg-amber-600 text-white">
+          <CardTitle className="flex items-center gap-2">
+            <Apple className="h-5 w-5" /> Spuntini
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <div className="grid w-full gap-2">
+              <Textarea 
+                id="snacks" 
+                placeholder="Cosa hai mangiato come spuntini? (es. frutta secca, barrette Herbalife, ecc.)"
+                value={trackerData.meals?.snacks || ''}
+                onChange={(e) => handleMealChange('snacks', e.target.value)}
+                rows={2}
+              />
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-gray-600">
+              Ricorda di scegliere spuntini salutari come barrette Herbalife, frutta secca o altri snack dalla lista consigliata.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Free Meal Tracker */}
+      <Card className="herbalife-card">
+        <CardHeader className="bg-amber-700 text-white">
+          <CardTitle className="flex items-center gap-2">
+            <Pizza className="h-5 w-5" /> Pasto Libero
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <div className="grid w-full gap-2">
+              <Textarea 
+                id="free-meal" 
+                placeholder="Descrivi il tuo pasto libero di oggi"
+                value={trackerData.meals?.freeMeal || ''}
+                onChange={(e) => handleMealChange('freeMeal', e.target.value)}
+                rows={2}
+              />
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-gray-600">
+              Anche nel pasto libero, cerca di mantenere un buon equilibrio nutrizionale.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Water Tracker */}
       <Card className="herbalife-card">
