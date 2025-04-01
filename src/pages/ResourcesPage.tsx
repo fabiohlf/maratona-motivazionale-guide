@@ -9,25 +9,25 @@ const articles = [
   {
     title: "I benefici dei frullati Herbalife",
     description: "Scopri perché i frullati Herbalife sono un'ottima scelta per un'alimentazione sana ed equilibrata.",
-    link: "#",
+    link: "https://www.herbalife.it/prodotti/nutrizione/sostituti-del-pasto",
     type: "article"
   },
   {
     title: "Perché eliminare i cereali per 10 giorni",
     description: "I benefici di una pausa dai cereali e come questo può migliorare il tuo metabolismo.",
-    link: "#",
+    link: "https://www.herbalife.it/articoli-e-scienza/benessere/nutrizione-bilanciata",
     type: "article"
   },
   {
     title: "L'importanza delle proteine nella dieta",
     description: "Come le proteine contribuiscono al mantenimento della massa muscolare e supportano il metabolismo.",
-    link: "#",
+    link: "https://www.herbalife.it/articoli-e-scienza/benessere/importanza-delle-proteine",
     type: "article"
   },
   {
     title: "Idratazione: la chiave del benessere",
     description: "Perché bere acqua a sufficienza è fondamentale per il tuo benessere e per ottimizzare i risultati.",
-    link: "#",
+    link: "https://www.herbalife.it/articoli-e-scienza/benessere/idratazione",
     type: "article"
   }
 ];
@@ -36,21 +36,21 @@ const videos = [
   {
     title: "Come preparare un frullato Herbalife",
     description: "Tutorial passo-passo per preparare un frullato nutriente e delizioso.",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=example1",
     thumbnail: "https://images.unsplash.com/photo-1622484212850-a04e89611fae",
     type: "video"
   },
   {
     title: "Esercizi semplici da fare a casa",
     description: "Una routine di esercizi leggeri perfetti da abbinare alla Maratona 10 Giorni.",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=example2",
     thumbnail: "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a",
     type: "video"
   },
   {
     title: "Testimonianze di successo",
     description: "Storie di persone che hanno completato con successo la Maratona 10 Giorni.",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=example3",
     thumbnail: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
     type: "video"
   }
@@ -103,7 +103,11 @@ const ResourceCard = ({ resource }: { resource: any }) => {
         </div>
       )}
       <CardFooter className="mt-auto pt-4">
-        <Button variant="outline" className="w-full flex items-center gap-2">
+        <Button 
+          variant="outline" 
+          className="w-full flex items-center gap-2"
+          onClick={() => window.open(resource.link, '_blank')}
+        >
           Leggi di più <ExternalLink className="h-4 w-4" />
         </Button>
       </CardFooter>
