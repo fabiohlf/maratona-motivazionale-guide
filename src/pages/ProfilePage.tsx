@@ -90,6 +90,8 @@ const ProfilePage = () => {
 
   const proteinNeeds = calculateProteinNeeds();
   const bmi = calculateBMI();
+  // Convertire bmi in numero per confronto
+  const numericBmi = parseFloat(bmi.toString());
 
   return (
     <div className="space-y-6 animate-fade-in">
@@ -229,7 +231,7 @@ const ProfilePage = () => {
                   {bmi || '?'}
                 </span>
                 <p className="text-gray-600 mt-1">
-                  {bmi > 0 ? interpretBMI(parseFloat(bmi)) : 'Inserisci peso e altezza'}
+                  {numericBmi > 0 ? interpretBMI(numericBmi) : 'Inserisci peso e altezza'}
                 </p>
               </div>
             </div>
