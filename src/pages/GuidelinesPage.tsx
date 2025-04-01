@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { X, Check, Coffee, Clock, Droplet, Beef } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Separator } from '@/components/ui/separator';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const GuidelinesPage = () => {
@@ -93,20 +95,28 @@ const GuidelinesPage = () => {
         
         <Tabs defaultValue="proteins" className="w-full">
           {isMobile ? (
-            <TabsList className="w-full grid grid-cols-5 mb-6">
-              <TabsTrigger value="proteins" className="w-full text-xs">Proteine</TabsTrigger>
-              <TabsTrigger value="vegetables" className="w-full text-xs">Verdure</TabsTrigger>
-              <TabsTrigger value="fruits" className="w-full text-xs">Frutta</TabsTrigger>
-              <TabsTrigger value="fats" className="w-full text-xs">Grassi Sani</TabsTrigger>
-              <TabsTrigger value="avoid" className="w-full text-xs">Da Evitare</TabsTrigger>
+            <TabsList className="w-full flex items-center mb-6">
+              <TabsTrigger value="proteins" className="flex-1 text-xs">Proteine</TabsTrigger>
+              <Separator orientation="vertical" className="h-4 mx-0.5 bg-gray-300" />
+              <TabsTrigger value="vegetables" className="flex-1 text-xs">Verdure</TabsTrigger>
+              <Separator orientation="vertical" className="h-4 mx-0.5 bg-gray-300" />
+              <TabsTrigger value="fruits" className="flex-1 text-xs">Frutta</TabsTrigger>
+              <Separator orientation="vertical" className="h-4 mx-0.5 bg-gray-300" />
+              <TabsTrigger value="fats" className="flex-1 text-xs">Grassi Sani</TabsTrigger>
+              <Separator orientation="vertical" className="h-4 mx-0.5 bg-gray-300" />
+              <TabsTrigger value="avoid" className="flex-1 text-xs">Da Evitare</TabsTrigger>
             </TabsList>
           ) : (
-            <TabsList className="w-full grid grid-cols-5 mb-6">
-              <TabsTrigger value="proteins">Proteine</TabsTrigger>
-              <TabsTrigger value="vegetables">Verdure</TabsTrigger>
-              <TabsTrigger value="fruits">Frutta</TabsTrigger>
-              <TabsTrigger value="fats">Grassi Sani</TabsTrigger>
-              <TabsTrigger value="avoid">Da Evitare</TabsTrigger>
+            <TabsList className="w-full flex items-center mb-6">
+              <TabsTrigger value="proteins" className="flex-1">Proteine</TabsTrigger>
+              <Separator orientation="vertical" className="h-6 mx-1 bg-gray-300" />
+              <TabsTrigger value="vegetables" className="flex-1">Verdure</TabsTrigger>
+              <Separator orientation="vertical" className="h-6 mx-1 bg-gray-300" />
+              <TabsTrigger value="fruits" className="flex-1">Frutta</TabsTrigger>
+              <Separator orientation="vertical" className="h-6 mx-1 bg-gray-300" />
+              <TabsTrigger value="fats" className="flex-1">Grassi Sani</TabsTrigger>
+              <Separator orientation="vertical" className="h-6 mx-1 bg-gray-300" />
+              <TabsTrigger value="avoid" className="flex-1">Da Evitare</TabsTrigger>
             </TabsList>
           )}
           
