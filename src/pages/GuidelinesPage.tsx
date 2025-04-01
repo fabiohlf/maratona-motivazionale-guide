@@ -2,10 +2,12 @@
 import React from 'react';
 import { X, Check, Coffee, Clock, Droplet, Beef } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const GuidelinesPage = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <div className="space-y-8 animate-fade-in">
       <div className="text-center mb-8">
@@ -91,13 +93,23 @@ const GuidelinesPage = () => {
         <h2 className="text-2xl font-bold mb-4 text-gray-800">🌟 Cibi Consigliati</h2>
         
         <Tabs defaultValue="proteins" className="w-full">
-          <TabsList className="w-full grid grid-cols-2 md:grid-cols-5 mb-6">
-            <TabsTrigger value="proteins">Proteine</TabsTrigger>
-            <TabsTrigger value="vegetables">Verdure</TabsTrigger>
-            <TabsTrigger value="fruits">Frutta</TabsTrigger>
-            <TabsTrigger value="fats">Grassi Sani</TabsTrigger>
-            <TabsTrigger value="avoid">Da Evitare</TabsTrigger>
-          </TabsList>
+          {isMobile ? (
+            <TabsList className="w-full grid grid-cols-2 mb-6 gap-y-2">
+              <TabsTrigger value="proteins" className="w-full">Proteine</TabsTrigger>
+              <TabsTrigger value="vegetables" className="w-full">Verdure</TabsTrigger>
+              <TabsTrigger value="fruits" className="w-full">Frutta</TabsTrigger>
+              <TabsTrigger value="fats" className="w-full">Grassi Sani</TabsTrigger>
+              <TabsTrigger value="avoid" className="w-full col-span-2">Da Evitare</TabsTrigger>
+            </TabsList>
+          ) : (
+            <TabsList className="w-full grid grid-cols-5 mb-6">
+              <TabsTrigger value="proteins">Proteine</TabsTrigger>
+              <TabsTrigger value="vegetables">Verdure</TabsTrigger>
+              <TabsTrigger value="fruits">Frutta</TabsTrigger>
+              <TabsTrigger value="fats">Grassi Sani</TabsTrigger>
+              <TabsTrigger value="avoid">Da Evitare</TabsTrigger>
+            </TabsList>
+          )}
           
           <TabsContent value="proteins" className="space-y-4">
             <Card className="herbalife-card">
@@ -194,7 +206,7 @@ const GuidelinesPage = () => {
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-herbalife-green mr-2 flex-shrink-0 mt-0.5" />
-            <span>Utilizza il tracker giornaliero per monitorare i tuoi progressi</span>
+            <span>Utilizza il diario giornaliero per monitorare i tuoi progressi</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-herbalife-green mr-2 flex-shrink-0 mt-0.5" />
